@@ -1,77 +1,19 @@
-@font-face {
-  font-family: 'Tofino-book';
-  src: local('TofinoProPersonal-Book'),
-    url(../font/TofinoProPersonal-Book.otf) format('otf');
-}
+@import './global';
 
-@font-face {
-  font-family: 'Tofino-light';
-  src: local('TofinoProPersonal-Light'),
-    url(../font/TofinoProPersonal-Light.otf) format('otf');
-}
-
-@font-face {
-  font-family: 'Tofino-light-italic';
-  src: local('TofinoProPersonal-LightItalic'),
-    url(../font/TofinoProPersonal-LightItalic.otf) format('otf');
-}
-
-@font-face {
-  font-family: 'Tofino-semi-bold';
-  src: local('TofinoProPersonal-Semibold'),
-    url(../font/TofinoProPersonal-Semibold.otf) format('otf');
-}
-
-// colors
-
-$white: rgb(255, 255, 255);
-
-$strip-studio-prana: rgb(248, 216, 150);
-$bg-studio-prana: rgb(53, 75, 62);
-
-$strip-studio-apana: rgb(172, 130, 119);
-$bg-studio-apana: rgb(227, 191, 184);
-
-$strip-chinese-new-year: rgb(228, 63, 21);
-$bg-chinese-new-year: linear-gradient(
-  90deg,
-  rgb(88, 88, 86) 0%,
-  rgb(156, 154, 154) 50%,
-  rgb(217, 216, 216) 100%
-);
-
-$strip-thienot: rgb(255, 255, 255);
-$bg-thienot: rgb(141, 111, 135);
-
-$strip-biotherm: rgb(17, 85, 156);
-$bg-biotherm: rgb(17, 85, 156);
-
-$strip-canal-plus: rgb(34, 107, 90);
-$bg-canal-plus: rgb(34, 107, 90);
-
-$strip-lacoste: rgb(42, 51, 91);
-$bg-lacoste: rgb(42, 51, 91);
-
-$strip-jean-louis: rgb(102, 90, 162);
-$bg-jean-louis: rgb(93, 93, 95);
-
-$strip-made-com: rgb(219, 236, 221);
-$bg-made-com: linear-gradient(
-  90deg,
-  rgb(252, 192, 13) 0%,
-  rgb(227, 6, 19) 100%
-);
-
-$strip-louboutin: rgb(103, 141, 243);
-$bg-studio-prana: rgb(233, 67, 67);
-
-$strip-elsachat-tv: rgb(106, 166, 89);
-$bg-elsachat-tv: rgb(106, 166, 89);
-
-body {
-  font-family: 'Tofino-book';
+html {
+  font-family: 'Tofino-book', Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI', Roboto, 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
 }
 
 h1 {
   font-family: 'Tofino-semi-bold';
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+body {
+  margin: 0;
+  padding: 0 1.5rem;
 }
