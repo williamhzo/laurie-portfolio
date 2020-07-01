@@ -18,8 +18,10 @@
 .env.test.local
 .env.production.local
 
+# pckg manager
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# local files
 /design-assets
