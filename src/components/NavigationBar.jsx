@@ -1,21 +1,17 @@
 import React from 'react'
-import tippy from 'tippy.js'
+
+import NavigationIcon from './NavigationIcon'
 
 const NavigationBar = () => {
   return (
     <div className="navigation-bar flex">
-      <div className="navigation-icon hoverable">
-        <img className="emoji" src="../assets/machineaprojets.png" alt="" />
-      </div>
-      <div className="navigation-icon hoverable">
-        <img className="emoji" src="../assets/index.png" alt="" />
-      </div>
-      <div className="navigation-icon hoverable">
-        <img className="emoji" src="../assets/apropos.png" alt="" />
-      </div>
-      <div className="navigation-icon hoverable">
-        <img className="emoji" src="../assets/contact.png" alt="" />
-      </div>
+      <NavigationIcon
+        content={'Machine à projets'}
+        src={'machineaprojets.png'}
+      />
+      <NavigationIcon content={'Index'} src={'index.png'} />
+      <NavigationIcon content={'A propos'} src={'apropos.png'} />
+      <NavigationIcon content={'Contact'} src={'contact.png'} />
     </div>
   )
 }
