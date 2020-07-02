@@ -1,9 +1,102 @@
-@import './global';
+@import './variables';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 html {
   font-family: 'Tofino-book', Arial, 'Noto Sans', sans-serif,
     'Apple Color Emoji', 'Segoe UI', Roboto, 'Segoe UI Emoji', 'Segoe UI Symbol',
     'Noto Color Emoji';
+}
+
+body {
+  margin: 0;
+  padding: 0 1.5rem;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    padding: 0 2rem;
+  }
+}
+
+ol,
+ul {
+  margin: 0 0 1.5rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0 0 1.5rem 0;
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1:not(:first-child),
+h2:not(:first-child),
+h3:not(:first-child),
+h4:not(:first-child) {
+  margin-top: 3rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+}
+
+section {
+  margin: 2rem 0;
+}
+
+section > h2 {
+  margin-top: 4rem;
+}
+
+@media screen and (min-width: 800px) {
+  section {
+    margin: 3rem 0;
+  }
 }
 
 h1 {
@@ -13,7 +106,23 @@ h1 {
   line-height: 1.6;
 }
 
-body {
-  margin: 0;
-  padding: 0 1.5rem;
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.mobile-only {
+  display: block;
+}
+
+@media screen and (min-width: 1100px) {
+  .mobile-only {
+    display: none;
+  }
 }
