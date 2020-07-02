@@ -1,13 +1,12 @@
 import React from 'react'
 
 import './styles/_global.scss'
+import NavigationBar from './components/NavigationBar'
 
 function App() {
   return (
     <div className="App">
-      <h2>
-        <a className="hoverable">This is a link!</a>
-      </h2>
+      <NavigationBar />
     </div>
   )
 }
