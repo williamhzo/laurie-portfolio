@@ -4,7 +4,7 @@ import ProjectRight from '../components/projects/ProjectRight'
 
 const Home = () => {
   return (
-    <div className="main">
+    <div className="container">
       <ProjectLeft />
       <ProjectRight />
     </div>
