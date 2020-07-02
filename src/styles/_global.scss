@@ -15,7 +15,6 @@ html {
 body {
   margin: 0;
   padding: 0 1.5rem;
-  height: 100vh;
   cursor: url(../assets/cursor/cursor.png), auto;
 }
 
@@ -75,6 +74,22 @@ h5 {
 
 .hoverable {
   cursor: url(../assets/cursor/cursor-hover.png), pointer;
+}
+
+.navigation-bar {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  justify-content: flex-end;
+}
+
+.navigation-icon {
+  padding: 0.25rem 0.5rem;
+  margin: 0 0.5rem;
+}
+
+.emoji {
+  height: 1.5rem;
 }
 
 @media screen and (min-width: 800px) {
