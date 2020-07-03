@@ -27,7 +27,7 @@ body {
     'Noto Color Emoji';
   margin: 0;
   padding: 0;
-  cursor: url(../assets/cursor/cursor.png), auto;
+  cursor: url(../assets/cursor/cursor.png) 15 15, auto;
 }
 
 ol,
@@ -75,7 +75,7 @@ p {
 }
 
 .hoverable {
-  cursor: url(../assets/cursor/cursor-hover.png), pointer;
+  cursor: url(../assets/cursor/cursor-hover.png) 15 15, pointer;
 }
 
 .navigation-bar {
