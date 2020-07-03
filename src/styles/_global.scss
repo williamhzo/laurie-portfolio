@@ -28,6 +28,7 @@ body {
   margin: 0;
   padding: 0;
   cursor: url(../assets/cursor/cursor.png) 15 15, auto;
+  background-color: var(--light);
 }
 
 ol,
@@ -38,7 +39,7 @@ ul {
 }
 
 img {
-  //display: inline-block;
+  display: inline-block;
   max-width: 100%;
   height: auto;
 }
@@ -108,7 +109,7 @@ span.emoji {
 hr {
   width: 75%;
   margin: $app-margin $app-margin $app-margin 0;
-  background-color: $dark;
+  background-color: var(--dark);
   height: 1px;
   border: none;
 }
@@ -118,11 +119,11 @@ hr {
 }
 
 .strip.studio-prana {
-  background-color: $strip-studio-prana;
+  background-color: var(--strip-studio-prana);
 }
 
 .project-detail.studio-prana {
-  background-color: rgb(53, 75, 62);
+  background-color: var(--bg-studio-prana);
 }
 
 .project-detail {
@@ -130,12 +131,21 @@ hr {
 }
 
 .project-container {
-  height: 40vmax;
+  // height: 45vmax;
+  //overflow: hidden;
 }
 
 .project-box {
   height: 100%;
   width: 100%;
+}
+
+.project-box.static > img {
+  object-fit: cover;
+}
+
+img.hoverable {
+  width: 50%;
 }
 
 .tags {
