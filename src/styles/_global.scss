@@ -21,13 +21,10 @@ p {
 
 // scaffolding
 
-html {
+body {
   font-family: 'Tofino-book', Arial, 'Noto Sans', sans-serif,
     'Apple Color Emoji', 'Segoe UI', Roboto, 'Segoe UI Emoji', 'Segoe UI Symbol',
     'Noto Color Emoji';
-}
-
-body {
   margin: 0;
   padding: 0;
   cursor: url(../assets/cursor/cursor.png), auto;
@@ -41,7 +38,7 @@ ul {
 }
 
 img {
-  display: inline-block;
+  //display: inline-block;
   max-width: 100%;
   height: auto;
 }
@@ -90,7 +87,7 @@ p {
 
 .navigation-icon {
   padding: 0.25rem 0.25rem;
-  margin: 0 0 0 0.75rem;
+  margin-left: 0.75rem;
 }
 
 .emoji {
@@ -118,7 +115,6 @@ hr {
 
 .strip {
   width: 30%;
-  border: 1px solid blue;
 }
 
 .strip.studio-prana {
@@ -131,7 +127,6 @@ hr {
 
 .project-detail {
   width: 100%;
-  border: 1px solid blue;
 }
 
 .project-container {
@@ -139,7 +134,6 @@ hr {
 }
 
 .project-box {
-  border: 1px solid blue;
   height: 100%;
   width: 100%;
 }
