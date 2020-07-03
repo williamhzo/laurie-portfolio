@@ -132,7 +132,7 @@ hr {
 
 .project-container {
   // height: 45vmax;
-  //overflow: hidden;
+  // overflow: hidden;
 }
 
 .project-box {
@@ -146,6 +146,10 @@ hr {
 
 img.hoverable {
   width: 50%;
+}
+
+img.hoverable:hover > .project-box {
+  background-color: var(--strip-studio-prana);
 }
 
 .tags {
