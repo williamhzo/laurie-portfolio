@@ -10,6 +10,7 @@ const Lacoste = () => {
 
   const emojiListStyle = css({
     top: '-4rem',
+    right: '25%',
   })
 
   const emojiStyle = css({
@@ -18,17 +19,18 @@ const Lacoste = () => {
 
   const titleStyle = css({
     textAlign: 'right',
-    top: '0',
-    left: '-4.75rem',
+    top: '1rem',
+    right: '-6.75rem',
   })
 
   const hoverImageStyle = css({
-    width: '50%',
+    width: '60%',
   })
 
   const tagListStyle = css({
     margin: '0',
     bottom: '0',
+    maxWidth: '6rem',
     left: 'calc(50% + 1rem)',
   })
 
@@ -46,30 +48,35 @@ const Lacoste = () => {
       <div className="project-box relative static flex">
         <img
           alt="studio prana illustration"
-          src="./assets/projects/HOME_PRANA_1.png"
+          src="./assets/projects/HOME_LACOSTE_1.png"
         />
         {active && (
           <h1 className="float project-title" css={titleStyle}>
-            studio<br></br>prana
+            {LACOSTE.title}
           </h1>
         )}
 
         <div
           className="border-project"
           style={{
-            border: active ? `1.5rem solid var(--bg-studio-prana)` : 'none',
+            border: active ? `1.5rem solid ${LACOSTE.backgroundColor}` : 'none',
           }}
         ></div>
       </div>
-      <div className="project-box relative flex">
-        <img
-          alt="studio prana illustration"
-          src="./assets/projects/HOME_PRANA_2.jpg"
-          css={hoverImageStyle}
-          className="hoverable"
+      <div className="project-box relative flex centered">
+        <video
+          id="lacoste-video"
+          className="hoverable "
           onMouseEnter={() => setActive(true)}
           onMouseLeave={() => setActive(false)}
-        />
+          loop
+          autoPlay
+          css={hoverImageStyle}
+        >
+          <source src="./assets/projects/HOME_LACOSTE_2.mp4" type="video/mp4" />
+          <source src="./assets/projects/HOME_LACOSTE_2.mp4" type="video/ogg" />
+          Your browser does not support the video tag.
+        </video>
         {active && (
           <React.Fragment>
             <ul className="tags flex float" css={emojiListStyle}>
