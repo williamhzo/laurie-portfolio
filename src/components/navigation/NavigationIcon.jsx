@@ -19,7 +19,7 @@ const NavigationIcon = ({ content, src }) => (
     theme="light"
   >
     <div className="navigation-icon hoverable">
-      <img src={`../assets/${src}`} alt="emoji navigation icon" />
+      <img src={`../assets/emojis/${src}`} alt="emoji navigation icon" />
     </div>
   </Tippy>
 )

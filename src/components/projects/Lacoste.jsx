@@ -4,9 +4,9 @@ import React, { useState } from 'react'
 
 import projects from '../../data/projects'
 
-const StudioPrana = () => {
-  const [active, setActive] = useState(false)
-  const STUDIOPRANA = JSON.parse(JSON.stringify(projects.studioPrana)) // deep copy of data
+const Lacoste = () => {
+  const [active, setActive] = useState(true)
+  const LACOSTE = JSON.parse(JSON.stringify(projects.lacoste)) // deep copy of data
 
   const emojiListStyle = css({
     top: '-4rem',
@@ -40,40 +40,9 @@ const StudioPrana = () => {
     <div
       className="flex"
       style={{
-        backgroundColor: active ? STUDIOPRANA.backgroundColor : 'inherit',
+        backgroundColor: active ? LACOSTE.backgroundColor : 'inherit',
       }}
     >
-      <div className="project-box relative flex">
-        <img
-          alt="studio prana illustration"
-          src="./assets/projects/HOME_PRANA_2.jpg"
-          css={hoverImageStyle}
-          className="hoverable"
-          onMouseEnter={() => setActive(true)}
-          onMouseLeave={() => setActive(false)}
-        />
-        {active && (
-          <React.Fragment>
-            <ul className="tags flex float" css={emojiListStyle}>
-              {STUDIOPRANA.emojiTags.map((el, index) => (
-                <li className="emoji" css={emojiStyle} key={index}>
-                  {el}
-                </li>
-              ))}
-            </ul>
-            <ul className="tags float" css={tagListStyle}>
-              {STUDIOPRANA.tags.map((el, index) => (
-                <li className="project-tag" key={index}>
-                  {el}
-                </li>
-              ))}
-            </ul>
-            <h3 className="project-date float" css={dateStyle}>
-              {STUDIOPRANA.date}
-            </h3>
-          </React.Fragment>
-        )}
-      </div>
       <div className="project-box relative static flex">
         <img
           alt="studio prana illustration"
@@ -92,8 +61,39 @@ const StudioPrana = () => {
           }}
         ></div>
       </div>
+      <div className="project-box relative flex">
+        <img
+          alt="studio prana illustration"
+          src="./assets/projects/HOME_PRANA_2.jpg"
+          css={hoverImageStyle}
+          className="hoverable"
+          onMouseEnter={() => setActive(true)}
+          onMouseLeave={() => setActive(false)}
+        />
+        {active && (
+          <React.Fragment>
+            <ul className="tags flex float" css={emojiListStyle}>
+              {LACOSTE.emojiTags.map((el, index) => (
+                <li className="emoji" css={emojiStyle} key={index}>
+                  {el}
+                </li>
+              ))}
+            </ul>
+            <ul className="tags float" css={tagListStyle}>
+              {LACOSTE.tags.map((el, index) => (
+                <li className="project-tag" key={index}>
+                  {el}
+                </li>
+              ))}
+            </ul>
+            <h3 className="project-date float" css={dateStyle}>
+              {LACOSTE.date}
+            </h3>
+          </React.Fragment>
+        )}
+      </div>
     </div>
   )
 }
 
-export default StudioPrana
+export default Lacoste

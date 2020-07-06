@@ -71,11 +71,14 @@ img {
 
 .emoji {
   height: 1.5rem;
-  margin-right: 1rem;
 }
 
 .float {
   position: absolute;
+}
+
+.relative {
+  position: relative;
 }
 
 .hoverable {
@@ -172,54 +175,22 @@ hr {
   width: 100%;
 }
 
-.project-container {
-  // position: relative;
-  // height: 100%;
-  // overflow: hidden;
-}
-
 .project-box {
-  position: relative;
   height: 100%;
   width: 100%;
 }
 
-.project-box.static > img {
-  object-fit: cover;
-}
-
-img.hoverable {
-  width: 50%;
-}
-
-.project-emojis {
-  top: -4rem;
-}
-
 .project-title {
-  display: inline-block;
-  text-align: right;
-  width: auto;
-  word-wrap: break-word;
-  top: 0;
-  left: -4.75rem;
   color: var(--white);
 }
 
 .project-date {
   color: var(--white);
-  bottom: -3.75rem;
 }
 
 .project-tag:not(:last-child) {
   max-width: 7rem;
   margin-bottom: 1rem;
-}
-
-.project-tag-list {
-  margin: 0;
-  bottom: 0;
-  left: calc(50% + 1rem);
 }
 
 .border-project {

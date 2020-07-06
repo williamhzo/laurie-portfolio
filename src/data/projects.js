@@ -13,6 +13,8 @@ const projects = {
       'typographie',
     ],
     backgroundColor: 'rgb(53, 75, 62)',
+    largeImageSrc: '',
+    smallImageSrc: '',
   },
   lacoste: {
     title: 'lacoste',
@@ -27,6 +29,8 @@ const projects = {
       'post-production',
     ],
     backgroundColor: 'rgb(42, 51, 91)',
+    largeImageSrc: '',
+    smallImageSrc: '',
   },
   chineseNewYear: {
     title: 'chinese new year',
@@ -35,6 +39,8 @@ const projects = {
     description: '',
     emojiTags: ['💡', '🖍'],
     tags: ['direction artistique', 'illustration'],
+    largeImageSrc: '',
+    smallImageSrc: '',
     backgroundColor:
       'linear-gradient(135deg,rgb(88, 88, 86) 0%, rgb(156, 154, 154) 50%, rgb(217, 216, 216) 100%)',
   },
@@ -46,6 +52,8 @@ const projects = {
     emojiTags: ['🔨', '👶🏻', '💬'],
     tags: ['set design', 'identité', 'graphisme'],
     backgroundColor: 'rgb(106, 166, 89)',
+    largeImageSrc: '',
+    smallImageSrc: '',
   },
   apana: {
     title: 'apana',
@@ -55,6 +63,8 @@ const projects = {
     emojiTags: ['💡', '👶🏻', '💬', '🖋'],
     tags: ['direction artistique', 'graphisme', 'typographie'],
     backgroundColor: 'rgb(106, 166, 89)',
+    largeImageSrc: '',
+    smallImageSrc: '',
   },
   thienot: {
     title: 'champagne thiénot',
@@ -64,6 +74,8 @@ const projects = {
     emojiTags: ['💡', '👶🏻', '💬', '🖋'],
     tags: ['direction artistique', 'graphisme', 'typographie'],
     backgroundColor: 'rgb(141, 111, 135)',
+    largeImageSrc: '',
+    smallImageSrc: '',
   },
   louboutin: {
     title: 'louboutin',
@@ -73,6 +85,8 @@ const projects = {
     emojiTags: ['🖥'],
     tags: ['post-production'],
     backgroundColor: 'rgb(233, 67, 67)',
+    largeImageSrc: '',
+    smallImageSrc: '',
   },
   biotherm: {
     title: 'biotherm',
@@ -82,6 +96,8 @@ const projects = {
     emojiTags: ['🧃', '💡', '🖍'],
     tags: ['packaging', 'direction artistique', 'illustration'],
     backgroundColor: 'rgb(17, 85, 156)',
+    largeImageSrc: '',
+    smallImageSrc: '',
   },
   jeanLouis: {
     title: 'jean-louis',
@@ -91,6 +107,8 @@ const projects = {
     emojiTags: ['🔨', '🖥'],
     tags: ['set design', 'post-production'],
     backgroundColor: 'rgb(233, 67, 67)',
+    largeImageSrc: '',
+    smallImageSrc: '',
   },
   madeCom: {
     title: 'made.com',
@@ -99,6 +117,8 @@ const projects = {
     description: '',
     emojiTags: ['💡', '🔨', '💬', '🖍'],
     tags: ['direction artistique', 'set design', 'graphisme', 'illustration'],
+    largeImageSrc: '',
+    smallImageSrc: '',
     backgroundColor:
       'linear-gradient(90deg,rgb(252, 192, 13) 0%,rgb(227, 6, 19) 100%)',
   },
@@ -110,6 +130,8 @@ const projects = {
     emojiTags: ['🖥'],
     tags: ['post-production'],
     backgroundColor: 'rgb(34, 107, 90)',
+    largeImageSrc: '',
+    smallImageSrc: '',
   },
 }
 
