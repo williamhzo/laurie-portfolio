@@ -9,8 +9,8 @@ const NavigationIcon = ({ content, src }) => (
     content={content.toUpperCase()}
     hideOnClick={true}
     inertia={true}
-    interactive={true}
-    interactiveBorder={15}
+    // interactive={true}
+    // interactiveBorder={15}
     moveTransition="transform 0.2s ease-out"
     maxWidth={150}
     offset={[0, 20]}
@@ -19,11 +19,7 @@ const NavigationIcon = ({ content, src }) => (
     theme="light"
   >
     <div className="navigation-icon hoverable">
-      <img
-        className="emoji"
-        src={`../assets/${src}`}
-        alt="emoji navigation icon"
-      />
+      <img src={`../assets/${src}`} alt="emoji navigation icon" />
     </div>
   </Tippy>
 )

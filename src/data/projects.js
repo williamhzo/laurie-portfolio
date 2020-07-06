@@ -1,11 +1,18 @@
-import StudioPrana from "../pages/StudioPrana"
-
-export const studio-StudioPrana = [
-  ('studio-prana' {
-    title: '',
-    date: '',
+const projects = {
+  studioPrana: {
+    title: 'studio prana',
+    date: '2020',
     description: '',
     subtitle: '',
-    tags: '',
-  }),
-]
+    emojiTags: ['💡', '👶🏻', '💬', '🖍', '🖋'],
+    tags: [
+      'direction artistique',
+      'identité',
+      'graphisme',
+      'illustration',
+      'typographie',
+    ],
+  },
+}
+
+export default projects
