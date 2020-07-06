@@ -29,6 +29,7 @@ const StudioPrana = () => {
   const tagListStyle = css({
     margin: '0',
     bottom: '0',
+    maxWidth: '7rem',
     left: 'calc(50% + 1rem)',
   })
 
