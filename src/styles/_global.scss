@@ -48,6 +48,8 @@ img {
 
 .tags {
   margin: $app-margin;
+  text-transform: uppercase;
+  color: var(--white);
 }
 
 .container {
@@ -74,8 +76,6 @@ img {
 
 .float {
   position: absolute;
-  left: 0;
-  top: 0;
 }
 
 .hoverable {
@@ -174,7 +174,7 @@ hr {
 
 .project-container {
   // position: relative;
-  // height: 45vmax;
+  // height: 100%;
   // overflow: hidden;
 }
 
@@ -189,7 +189,6 @@ hr {
 }
 
 img.hoverable {
-  position: relative;
   width: 50%;
 }
 
@@ -198,14 +197,30 @@ img.hoverable {
 }
 
 .project-title {
-  top: 1rem;
-  right: 1rem;
+  display: inline-block;
+  text-align: right;
+  width: auto;
+  word-wrap: break-word;
+  top: 0;
+  left: -4.75rem;
   color: var(--white);
 }
 
-// img.hoverable:hover > .project-box {
-//   background-color: var(--strip-studio-prana);
-// }
+.project-date {
+  color: var(--white);
+  bottom: -3.75rem;
+}
+
+.project-tag:not(:last-child) {
+  max-width: 7rem;
+  margin-bottom: 1rem;
+}
+
+.project-tag-list {
+  margin: 0;
+  bottom: 0;
+  left: calc(50% + 1rem);
+}
 
 .border-project {
   position: absolute;
