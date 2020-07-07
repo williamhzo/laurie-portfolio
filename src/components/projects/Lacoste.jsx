@@ -46,10 +46,7 @@ const Lacoste = () => {
       }}
     >
       <div className="project-box relative static flex">
-        <img
-          alt="studio prana illustration"
-          src="./assets/projects/HOME_LACOSTE_1.png"
-        />
+        <img alt="studio prana illustration" src={LACOSTE.largeMedia} />
         {active && (
           <h1 className="float project-title" css={titleStyle}>
             {LACOSTE.title}
@@ -73,8 +70,8 @@ const Lacoste = () => {
           autoPlay
           css={hoverImageStyle}
         >
-          <source src="./assets/projects/HOME_LACOSTE_2.mp4" type="video/mp4" />
-          <source src="./assets/projects/HOME_LACOSTE_2.mp4" type="video/ogg" />
+          <source src={LACOSTE.smallMedia} type="video/mp4" />
+          <source src={LACOSTE.smallMedia} type="video/ogg" />
           Your browser does not support the video tag.
         </video>
         {active && (

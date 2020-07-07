@@ -47,7 +47,7 @@ const StudioPrana = () => {
       <div className="project-box relative flex">
         <img
           alt="studio prana illustration"
-          src="./assets/projects/HOME_PRANA_2.jpg"
+          src={STUDIOPRANA.smallMedia}
           css={hoverImageStyle}
           className="hoverable"
           onMouseEnter={() => setActive(true)}
@@ -76,10 +76,7 @@ const StudioPrana = () => {
         )}
       </div>
       <div className="project-box relative static flex">
-        <img
-          alt="studio prana illustration"
-          src="./assets/projects/HOME_PRANA_1.png"
-        />
+        <img alt="studio prana illustration" src={STUDIOPRANA.largeMedia} />
         {active && (
           <h1 className="float project-title" css={titleStyle}>
             studio<br></br>prana
