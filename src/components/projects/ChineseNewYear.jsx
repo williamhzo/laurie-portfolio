@@ -4,6 +4,8 @@ import React, { useState } from 'react'
 
 import projects from '../../data/projects'
 
+const smallContainer = css({})
+
 const emojiListStyle = css({
   top: '-4rem',
 })
@@ -33,20 +35,21 @@ const dateStyle = css({
   bottom: '-3.75rem',
 })
 
-const StudioPrana = () => {
-  const [active, setActive] = useState(false)
-  const data = JSON.parse(JSON.stringify(projects.studioPrana)) // deep copy of data
+const ChineseNewYear = () => {
+  const [active, setActive] = useState(true)
+  const data = JSON.parse(JSON.stringify(projects.chineseNewYear)) // deep copy of data
 
   return (
-    <div
-      className="flex"
-      style={{
-        backgroundColor: active ? data.backgroundColor : 'inherit',
-      }}
-    >
-      <div className="project-box relative flex">
+    <div className="flex">
+      <div
+        css={smallContainer}
+        className="project-box relative flex"
+        style={{
+          background: active ? data.backgroundColor : 'inherit',
+        }}
+      >
         <img
-          alt="studio prana illustration"
+          alt="chinese new year illustration"
           src={data.smallMedia}
           css={hoverImageStyle}
           className="hoverable"
@@ -76,17 +79,17 @@ const StudioPrana = () => {
         )}
       </div>
       <div className="project-box relative static flex">
-        <img alt="studio prana illustration" src={data.largeMedia} />
+        <img alt="chinese new year illustration" src={data.largeMedia} />
         {active && (
           <h1 className="float project-title" css={titleStyle}>
             studio<br></br>prana
           </h1>
         )}
-
         <div
           className="border-project"
           style={{
-            border: active ? `1.5rem solid ${data.backgroundColor}` : 'none',
+            // background: active ? `${data.backgroundColor}` : 'none',
+            border: active ? `1.5rem solid rgb(88, 88, 86)` : 'none',
           }}
         ></div>
       </div>
@@ -94,4 +97,4 @@ const StudioPrana = () => {
   )
 }
 
-export default StudioPrana
+export default ChineseNewYear

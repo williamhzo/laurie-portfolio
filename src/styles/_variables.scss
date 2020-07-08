@@ -37,10 +37,12 @@
 
   --strip-chinese-new-year: rgb(228, 63, 21);
   --bg-chinese-new-year: linear-gradient(
-    135deg,
+    75deg,
     rgb(88, 88, 86) 0%,
-    rgb(156, 154, 154) 50%,
-    rgb(217, 216, 216) 100%
+    rgb(156, 154, 154) 25%,
+    rgb(217, 216, 216) 50%,
+    rgb(156, 154, 154) 75%,
+    rgb(88, 88, 86) 100%
   );
 
   --strip-thienot: rgb(255, 255, 255);

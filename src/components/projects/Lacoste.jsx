@@ -4,59 +4,62 @@ import React, { useState } from 'react'
 
 import projects from '../../data/projects'
 
+const emojiListStyle = css({
+  top: '-4rem',
+  right: '7.5rem',
+})
+
+const emojiStyle = css({
+  marginLeft: '1rem',
+})
+
+const titleStyle = css({
+  textAlign: 'right',
+  top: '1rem',
+  right: '-6.75rem',
+})
+
+const hoverImageStyle = css({
+  width: '60%',
+})
+
+const tagListStyle = css({
+  margin: '0',
+  bottom: '0',
+  maxWidth: '7rem',
+  left: '1rem',
+  textAlign: 'right',
+})
+
+const dateStyle = css({
+  bottom: '-4.5rem',
+  right: '7.5rem',
+  textAlign: 'right',
+})
+
 const Lacoste = () => {
-  const [active, setActive] = useState(true)
-  const LACOSTE = JSON.parse(JSON.stringify(projects.lacoste)) // deep copy of data
-
-  const emojiListStyle = css({
-    top: '-4rem',
-    right: '25%',
-  })
-
-  const emojiStyle = css({
-    marginRight: '1rem',
-  })
-
-  const titleStyle = css({
-    textAlign: 'right',
-    top: '1rem',
-    right: '-6.75rem',
-  })
-
-  const hoverImageStyle = css({
-    width: '60%',
-  })
-
-  const tagListStyle = css({
-    margin: '0',
-    bottom: '0',
-    maxWidth: '6rem',
-    left: 'calc(50% + 1rem)',
-  })
-
-  const dateStyle = css({
-    bottom: '-3.75rem',
-  })
+  const [active, setActive] = useState(false)
+  const data = JSON.parse(JSON.stringify(projects.lacoste)) // deep copy of data
 
   return (
     <div
       className="flex"
       style={{
-        backgroundColor: active ? LACOSTE.backgroundColor : 'inherit',
+        backgroundColor: active ? data.backgroundColor : 'inherit',
       }}
     >
       <div className="project-box relative static flex">
-        <img alt="studio prana illustration" src={LACOSTE.largeMedia} />
+        <img alt="studio prana illustration" src={data.largeMedia} />
         {active && (
           <h1 className="float project-title" css={titleStyle}>
-            {LACOSTE.title}
+            {data.title}
           </h1>
         )}
 
         <div
           className="border-project"
           style={{
-            border: active ? `1.5rem solid ${LACOSTE.backgroundColor}` : 'none',
+            border: active ? `1.5rem solid ${data.backgroundColor}` : 'none',
           }}
         ></div>
       </div>
@@ -70,28 +73,30 @@ const Lacoste = () => {
           autoPlay
           css={hoverImageStyle}
         >
-          <source src={LACOSTE.smallMedia} type="video/mp4" />
-          <source src={LACOSTE.smallMedia} type="video/ogg" />
+          <source src={data.smallMedia} type="video/mp4" />
+          <source src={data.smallMedia} type="video/ogg" />
           Your browser does not support the video tag.
         </video>
         {active && (
           <React.Fragment>
             <ul className="tags flex float" css={emojiListStyle}>
-              {LACOSTE.emojiTags.map((el, index) => (
+              {data.emojiTags.map((el, index) => (
                 <li className="emoji" css={emojiStyle} key={index}>
                   {el}
                 </li>
               ))}
             </ul>
             <ul className="tags float" css={tagListStyle}>
-              {LACOSTE.tags.map((el, index) => (
+              {data.tags.map((el, index) => (
                 <li className="project-tag" key={index}>
                   {el}
                 </li>
               ))}
             </ul>
             <h3 className="project-date float" css={dateStyle}>
-              {LACOSTE.date}
+              {data.subtitle}
+              <br></br>
+              {data.date}
             </h3>
           </React.Fragment>
         )}

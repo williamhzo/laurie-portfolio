@@ -48,7 +48,7 @@ const projects = {
     smallMedia:
       'https://res.cloudinary.com/flextance/image/upload/v1594111655/laurie-bonneau-folio/HOME_CHINESE_2_npxg1p.png',
     backgroundColor:
-      'linear-gradient(135deg,rgb(88, 88, 86) 0%, rgb(156, 154, 154) 50%, rgb(217, 216, 216) 100%)',
+      'linear-gradient(75deg, rgb(88, 88, 86) 0%,rgb(156, 154, 154) 25%, rgb(217, 216, 216) 50%, rgb(156, 154, 154) 75%, rgb(88, 88, 86) 100%)',
   },
   elsachatTv: {
     title: 'elsachat',
