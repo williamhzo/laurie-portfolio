@@ -1,6 +1,7 @@
 import React from 'react'
 
 import '../styles/_global.scss'
+
 import StudioPrana from '../components/projects/StudioPrana'
 import Lacoste from '../components/projects/Lacoste'
 import ChineseNewYear from '../components/projects/ChineseNewYear'

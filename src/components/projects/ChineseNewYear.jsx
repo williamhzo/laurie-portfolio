@@ -49,7 +49,7 @@ const ChineseNewYear = () => {
         }}
       >
         <img
-          alt="chinese new year illustration"
+          alt={`${data.title} illustration`}
           src={data.smallMedia}
           css={hoverImageStyle}
           className="hoverable"
@@ -79,7 +79,7 @@ const ChineseNewYear = () => {
         )}
       </div>
       <div className="project-box relative static flex">
-        <img alt="chinese new year illustration" src={data.largeMedia} />
+        <img alt={`${data.title} illustration`} src={data.largeMedia} />
         {active && (
           <h1 className="float project-title" css={titleStyle}>
             studio<br></br>prana

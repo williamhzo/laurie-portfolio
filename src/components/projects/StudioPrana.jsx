@@ -46,7 +46,7 @@ const StudioPrana = () => {
     >
       <div className="project-box relative flex">
         <img
-          alt="studio prana illustration"
+          alt={`${data.title} illustration`}
           src={data.smallMedia}
           css={hoverImageStyle}
           className="hoverable"
@@ -76,7 +76,7 @@ const StudioPrana = () => {
         )}
       </div>
       <div className="project-box relative static flex">
-        <img alt="studio prana illustration" src={data.largeMedia} />
+        <img alt={`${data.title} illustration`} src={data.largeMedia} />
         {active && (
           <h1 className="float project-title" css={titleStyle}>
             studio<br></br>prana

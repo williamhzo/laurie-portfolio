@@ -49,7 +49,7 @@ const Lacoste = () => {
       }}
     >
       <div className="project-box relative static flex">
-        <img alt="studio prana illustration" src={data.largeMedia} />
+        <img alt={`${data.title} illustration`} src={data.largeMedia} />
         {active && (
           <h1 className="float project-title" css={titleStyle}>
             {data.title}
@@ -72,6 +72,7 @@ const Lacoste = () => {
           loop
           autoPlay
           css={hoverImageStyle}
+          alt={`${data.title} illustration`}
         >
           <source src={data.smallMedia} type="video/mp4" />
           <source src={data.smallMedia} type="video/ogg" />
