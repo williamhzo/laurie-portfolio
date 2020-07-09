@@ -6,7 +6,7 @@ import projects from '../../data/projects'
 import LargeMediaRight from '../LargeMediaRight'
 
 const emojiListStyle = css({
-  top: '-2.5rem',
+  top: 'calc(25% - 1.5rem - 1rem)',
   marginLeft: 'var(--global-spacing)',
 })
 
@@ -26,18 +26,18 @@ const hoverImageStyle = css({
 
 const tagListStyle = css({
   margin: '0',
-  bottom: '0',
+  bottom: '25%',
   maxWidth: '7rem',
   left: 'calc(50% + 1rem)',
 })
 
 const dateStyle = css({
-  bottom: '-2rem',
+  bottom: 'calc(25% - 1rem - 1rem)',
   marginLeft: 'var(--global-spacing)',
 })
 
 const StudioPrana = () => {
-  const [active, setActive] = useState(true)
+  const [active, setActive] = useState(false)
   const data = JSON.parse(JSON.stringify(projects.studioPrana)) // deep copy of data
 
   return (

@@ -6,8 +6,8 @@ import projects from '../../data/projects'
 import LargeMediaLeft from '../LargeMediaLeft'
 
 const emojiListStyle = css({
-  top: '-4rem',
-  right: '7.5rem',
+  top: '13%',
+  right: '20%',
 })
 
 const emojiStyle = css({
@@ -17,7 +17,7 @@ const emojiStyle = css({
 const titleStyle = css({
   textAlign: 'right',
   top: '1rem',
-  right: '-6.75rem',
+  left: '1rem',
 })
 
 const hoverImageStyle = css({
@@ -26,15 +26,15 @@ const hoverImageStyle = css({
 
 const tagListStyle = css({
   margin: '0',
-  bottom: '0',
+  bottom: '19.5%',
   maxWidth: '7rem',
   left: '1rem',
   textAlign: 'right',
 })
 
 const dateStyle = css({
-  bottom: '-4.5rem',
-  right: '7.5rem',
+  bottom: '13%',
+  right: '20%',
   textAlign: 'right',
 })
 

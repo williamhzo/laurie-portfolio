@@ -4,20 +4,19 @@ import React, { useState } from 'react'
 
 import projects from '../../data/projects'
 
-const smallContainer = css({})
-
 const emojiListStyle = css({
-  top: '-4rem',
+  bottom: 'calc(12%)',
+  left: 'calc(25%)',
 })
 
 const emojiStyle = css({
-  marginRight: '1rem',
+  marginBottom: 'var(--global-spacing)',
 })
 
 const titleStyle = css({
   textAlign: 'right',
-  top: '0',
-  left: '-4.75rem',
+  top: '1rem',
+  right: '1rem',
 })
 
 const hoverImageStyle = css({
@@ -25,14 +24,18 @@ const hoverImageStyle = css({
 })
 
 const tagListStyle = css({
+  textAlign: 'right',
   margin: '0',
-  bottom: '0',
   maxWidth: '7rem',
-  left: 'calc(50% + 1rem)',
+  bottom: 'calc(13.5%)',
+  left: 'calc(7%)',
 })
 
 const dateStyle = css({
-  bottom: '-3.75rem',
+  top: 'calc(25%)',
+  left: 'calc(19%)',
+  // marginLeft: 'var(--global-spacing)',
+  maxWidth: '2rem',
 })
 
 const ChineseNewYear = () => {
@@ -42,8 +45,7 @@ const ChineseNewYear = () => {
   return (
     <div className="flex">
       <div
-        css={smallContainer}
-        className="project-box relative flex"
+        className="project-box relative flex centered"
         style={{
           background: active ? data.backgroundColor : 'inherit',
         }}
@@ -58,7 +60,7 @@ const ChineseNewYear = () => {
         />
         {active && (
           <React.Fragment>
-            <ul className="tags flex float" css={emojiListStyle}>
+            <ul className="tags flex float column" css={emojiListStyle}>
               {data.emojiTags.map((el, index) => (
                 <li className="emoji" css={emojiStyle} key={index}>
                   {el}
@@ -75,21 +77,21 @@ const ChineseNewYear = () => {
             <h3 className="project-date float" css={dateStyle}>
               {data.date}
             </h3>
+            <h1 className="float project-title" css={titleStyle}>
+              <span className="light">happy</span>
+              <br></br>chinese<br></br>new year
+            </h1>
           </React.Fragment>
         )}
       </div>
-      <div className="project-box relative static flex">
+      <div className="project-box relative flex">
         <img alt={`${data.title} illustration`} src={data.largeMedia} />
-        {active && (
-          <h1 className="float project-title" css={titleStyle}>
-            studio<br></br>prana
-          </h1>
-        )}
         <div
           className="border-project"
           style={{
-            // background: active ? `${data.backgroundColor}` : 'none',
-            border: active ? `1.5rem solid rgb(88, 88, 86)` : 'none',
+            borderTop: active ? `1rem solid rgb(88, 88, 86)` : 'none',
+            borderRight: active ? `1rem solid rgb(88, 88, 86)` : 'none',
+            borderBottom: active ? `1rem solid rgb(88, 88, 86)` : 'none',
           }}
         ></div>
       </div>
