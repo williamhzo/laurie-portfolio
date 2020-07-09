@@ -3,19 +3,21 @@ import { jsx, css } from '@emotion/core'
 import React, { useState } from 'react'
 
 import projects from '../../data/projects'
+import LargeMediaRight from '../LargeMediaRight'
 
 const emojiListStyle = css({
-  top: '-4rem',
+  top: '-2.5rem',
+  marginLeft: 'var(--global-spacing)',
 })
 
 const emojiStyle = css({
-  marginRight: '1rem',
+  marginRight: 'var(--global-spacing)',
 })
 
 const titleStyle = css({
   textAlign: 'right',
-  top: '0',
-  left: '-4.75rem',
+  top: '1rem',
+  right: '1rem',
 })
 
 const hoverImageStyle = css({
@@ -30,11 +32,12 @@ const tagListStyle = css({
 })
 
 const dateStyle = css({
-  bottom: '-3.75rem',
+  bottom: '-2rem',
+  marginLeft: 'var(--global-spacing)',
 })
 
 const StudioPrana = () => {
-  const [active, setActive] = useState(false)
+  const [active, setActive] = useState(true)
   const data = JSON.parse(JSON.stringify(projects.studioPrana)) // deep copy of data
 
   return (
@@ -72,24 +75,13 @@ const StudioPrana = () => {
             <h3 className="project-date float" css={dateStyle}>
               {data.date}
             </h3>
+            <h1 className="float project-title" css={titleStyle}>
+              studio<br></br>prana
+            </h1>
           </React.Fragment>
         )}
       </div>
-      <div className="project-box relative static flex">
-        <img alt={`${data.title} illustration`} src={data.largeMedia} />
-        {active && (
-          <h1 className="float project-title" css={titleStyle}>
-            studio<br></br>prana
-          </h1>
-        )}
-
-        <div
-          className="border-project"
-          style={{
-            border: active ? `1.5rem solid ${data.backgroundColor}` : 'none',
-          }}
-        ></div>
-      </div>
+      <LargeMediaRight data={data} active={active} />
     </div>
   )
 }

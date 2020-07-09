@@ -3,6 +3,7 @@ import { jsx, css } from '@emotion/core'
 import React, { useState } from 'react'
 
 import projects from '../../data/projects'
+import LargeMediaLeft from '../LargeMediaLeft'
 
 const emojiListStyle = css({
   top: '-4rem',
@@ -48,21 +49,7 @@ const Lacoste = () => {
         backgroundColor: active ? data.backgroundColor : 'inherit',
       }}
     >
-      <div className="project-box relative static flex">
-        <img alt={`${data.title} illustration`} src={data.largeMedia} />
-        {active && (
-          <h1 className="float project-title" css={titleStyle}>
-            {data.title}
-          </h1>
-        )}
-
-        <div
-          className="border-project"
-          style={{
-            border: active ? `1.5rem solid ${data.backgroundColor}` : 'none',
-          }}
-        ></div>
-      </div>
+      <LargeMediaLeft data={data} active={active} />
       <div className="project-box relative flex centered">
         <video
           id="lacoste-video"
@@ -99,6 +86,9 @@ const Lacoste = () => {
               <br></br>
               {data.date}
             </h3>
+            <h1 className="float project-title" css={titleStyle}>
+              {data.title}
+            </h1>
           </React.Fragment>
         )}
       </div>

@@ -15,7 +15,7 @@ h4,
 h5,
 h6,
 p {
-  margin: $app-margin;
+  margin: 0;
   padding: 0;
 }
 
@@ -33,7 +33,7 @@ body {
 
 ol,
 ul {
-  margin: 0 0 $app-margin 0;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -47,7 +47,6 @@ img {
 // atoms & layout
 
 .tags {
-  margin: $app-margin;
   text-transform: uppercase;
   color: var(--white);
 }
@@ -102,7 +101,6 @@ h1 {
   font-size: 0.875rem;
   text-transform: uppercase;
   line-height: 1.5;
-  margin-bottom: 2rem;
 }
 
 h2 {
@@ -176,7 +174,7 @@ hr {
 }
 
 .project-box {
-  height: 100%;
+  height: 50vmax;
   width: 100%;
 }
 
