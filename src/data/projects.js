@@ -70,7 +70,7 @@ const projects = {
     description: '',
     emojiTags: ['💡', '👶🏻', '💬', '🖋'],
     tags: ['direction artistique', 'graphisme', 'typographie'],
-    backgroundColor: 'rgb(106, 166, 89)',
+    backgroundColor: 'rgb(227, 191, 184)',
     largeMedia:
       'https://res.cloudinary.com/flextance/video/upload/v1594111618/laurie-bonneau-folio/HOME_APANA_1_uuyyzi.mp4',
     smallMedia:

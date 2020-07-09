@@ -39,7 +39,7 @@ const dateStyle = css({
 })
 
 const ChineseNewYear = () => {
-  const [active, setActive] = useState(true)
+  const [active, setActive] = useState(false)
   const data = JSON.parse(JSON.stringify(projects.chineseNewYear)) // deep copy of data
 
   return (

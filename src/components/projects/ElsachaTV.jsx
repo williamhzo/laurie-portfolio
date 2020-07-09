@@ -4,19 +4,24 @@ import React, { useState } from 'react'
 
 import projects from '../../data/projects'
 
+const videoStyle = css({
+  width: '100%',
+  height: '100%',
+})
+
 const emojiListStyle = css({
-  top: '-4rem',
-  right: '7.5rem',
+  bottom: '21%',
+  right: 'calc(20% - 1.5rem - 1rem)',
 })
 
 const emojiStyle = css({
-  marginLeft: '1rem',
+  marginBottom: '1rem',
 })
 
 const titleStyle = css({
-  textAlign: 'right',
+  textAlign: 'left',
   top: '1rem',
-  right: '-6.75rem',
+  left: '1rem',
 })
 
 const hoverImageStyle = css({
@@ -25,16 +30,16 @@ const hoverImageStyle = css({
 
 const tagListStyle = css({
   margin: '0',
-  bottom: '0',
+  bottom: '4%',
   maxWidth: '7rem',
-  left: '1rem',
-  textAlign: 'right',
+  left: '24%',
+  textAlign: 'left',
 })
 
 const dateStyle = css({
-  bottom: '-4.5rem',
-  right: '7.5rem',
-  textAlign: 'right',
+  top: '15%',
+  left: '20%',
+  textAlign: 'left',
 })
 
 const ElsachaTV = () => {
@@ -48,37 +53,41 @@ const ElsachaTV = () => {
         backgroundColor: active ? data.backgroundColor : 'inherit',
       }}
     >
-      <div className="project-box relative static flex">
-        <img alt={`${data.title} illustration`} src={data.largeMedia} />
-        {active && (
-          <h1 className="float project-title" css={titleStyle}>
-            {data.title}
-          </h1>
-        )}
+      <div className="project-box relative flex">
         <div
           className="border-project"
           style={{
-            border: active ? `1.5rem solid ${data.backgroundColor}` : 'none',
+            borderTop: active ? `1rem solid ${data.backgroundColor}` : 'none',
+            borderLeft: active ? `1rem solid ${data.backgroundColor}` : 'none',
+            borderBottom: active
+              ? `1rem solid ${data.backgroundColor}`
+              : 'none',
           }}
         ></div>
-      </div>
-      <div className="project-box relative flex centered">
         <video
-          id="lacoste-video"
-          className="hoverable "
-          onMouseEnter={() => setActive(true)}
-          onMouseLeave={() => setActive(false)}
+          id={`${data.title}-video`}
           loop
           autoPlay
-          css={hoverImageStyle}
+          alt={`${data.title} video`}
+          css={videoStyle}
         >
-          <source src={data.smallMedia} type="video/mp4" />
-          <source src={data.smallMedia} type="video/ogg" />
+          <source src={data.largeMedia} type="video/mp4" />
+          <source src={data.largeMedia} type="video/ogg" />
           Your browser does not support the video tag.
         </video>
+      </div>
+      <div className="project-box relative flex centered">
+        <img
+          className="hoverable "
+          alt={`${data.title} illustration`}
+          src={data.smallMedia}
+          onMouseEnter={() => setActive(true)}
+          onMouseLeave={() => setActive(false)}
+          css={hoverImageStyle}
+        />
         {active && (
           <React.Fragment>
-            <ul className="tags flex float" css={emojiListStyle}>
+            <ul className="tags flex float column" css={emojiListStyle}>
               {data.emojiTags.map((el, index) => (
                 <li className="emoji" css={emojiStyle} key={index}>
                   {el}
@@ -93,10 +102,13 @@ const ElsachaTV = () => {
               ))}
             </ul>
             <h3 className="project-date float" css={dateStyle}>
-              {data.subtitle}
-              <br></br>
               {data.date}
             </h3>
+            <h1 className="float project-title" css={titleStyle}>
+              {data.title}
+              <br></br>
+              <span className="light">{data.subtitle}</span>
+            </h1>
           </React.Fragment>
         )}
       </div>

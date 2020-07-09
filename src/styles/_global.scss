@@ -116,7 +116,11 @@ h3 {
 
 p {
   font-family: 'Tofino-book';
-  font-size: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.2;
+  &:not(:last-child) {
+    margin-bottom: 0.75rem;
+  }
 }
 
 .light {
