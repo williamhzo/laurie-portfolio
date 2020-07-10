@@ -4,7 +4,6 @@ import NavigationIcon from './NavigationIcon'
 import ContactCard from './ContactCard'
 
 const NavigationBar = () => {
-  const indexParagraph = <p>this is the index</p>
   const aProposParagraph = (
     <React.Fragment>
       <p>
@@ -31,11 +30,7 @@ const NavigationBar = () => {
         content={'Machine à projets'}
         src={'machineaprojets.png'}
       />
-      <NavigationIcon
-        content={'Index'}
-        paragraph={indexParagraph}
-        src={'index.png'}
-      />
+      <NavigationIcon content={'Index'} src={'index.png'} />
       <NavigationIcon
         content={'A propos'}
         paragraph={aProposParagraph}

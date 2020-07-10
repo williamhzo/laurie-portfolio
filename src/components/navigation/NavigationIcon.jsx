@@ -10,40 +10,65 @@ const tippyLargeStyle = css({
   textAlign: 'left',
 })
 
-const NavigationIcon = ({ content, paragraph, src }) => (
-  <Tippy
-    content={paragraph}
-    css={tippyLargeStyle}
-    allowHTML={true}
-    interactive={true}
-    interactiveBorder={15}
-    className="tippy"
-    hideOnClick={true}
-    trigger="click"
-    theme="light-border"
-    offset={[0, 20]}
-    placement="bottom-end"
-    maxWidth="none"
-  >
-    <Tippy
-      className="tippy"
-      content={content.toUpperCase()}
-      hideOnClick={true}
-      inertia={true}
-      // interactive={true}
-      // interactiveBorder={15}
-      moveTransition="transform 0.2s ease-out"
-      maxWidth={150}
-      offset={[0, 20]}
-      placement="bottom-end"
-      trigger="mouseenter"
-      theme="light-border"
-    >
-      <div className="navigation-icon hoverable">
-        <img src={`../assets/emojis/${src}`} alt="emoji navigation icon" />
-      </div>
-    </Tippy>
-  </Tippy>
-)
+const NavigationIcon = ({ content, paragraph, src }) => {
+  if (paragraph) {
+    return (
+      <Tippy
+        content={paragraph}
+        css={tippyLargeStyle}
+        allowHTML={true}
+        interactive={true}
+        interactiveBorder={15}
+        className="tippy"
+        hideOnClick={true}
+        trigger="click"
+        theme="light-border"
+        offset={[0, 20]}
+        placement="bottom-end"
+        maxWidth="none"
+      >
+        <Tippy
+          className="tippy"
+          content={content.toUpperCase()}
+          hideOnClick={true}
+          inertia={true}
+          // interactive={true}
+          // interactiveBorder={15}
+          moveTransition="transform 0.2s ease-out"
+          maxWidth={150}
+          offset={[0, 20]}
+          placement="bottom-end"
+          trigger="mouseenter"
+          theme="light-border"
+        >
+          <div className="navigation-icon hoverable">
+            <img src={`../assets/emojis/${src}`} alt="emoji navigation icon" />
+          </div>
+        </Tippy>
+      </Tippy>
+    )
+  } else {
+    return (
+      <Tippy
+        className="tippy"
+        content={content.toUpperCase()}
+        hideOnClick={true}
+        inertia={true}
+        // interactive={true}
+        // interactiveBorder={15}
+        moveTransition="transform 0.2s ease-out"
+        maxWidth={150}
+        offset={[0, 20]}
+        placement="bottom-end"
+        trigger="mouseenter"
+        theme="light-border"
+      >
+        <div className="navigation-icon hoverable">
+          <img src={`../assets/emojis/${src}`} alt="emoji navigation icon" />
+        </div>
+      </Tippy>
+    )
+  }
+}
 
 export default NavigationIcon
