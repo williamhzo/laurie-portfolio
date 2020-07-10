@@ -21,7 +21,7 @@ const emojiStyle = css({
 const titleStyle = css({
   textAlign: 'right',
   top: '1rem',
-  left: '1rem',
+  right: '1rem',
 })
 
 const hoverImageStyle = css({
@@ -82,7 +82,7 @@ const Apana = () => {
               {data.date}
             </h3>
             <h1 className="float project-title" css={titleStyle}>
-              studio<br></br>prana
+              Apana
             </h1>
           </React.Fragment>
         )}
@@ -92,7 +92,7 @@ const Apana = () => {
           className="border-project"
           style={{
             borderTop: active ? `1rem solid ${data.backgroundColor}` : 'none',
-            borderLeft: active ? `1rem solid ${data.backgroundColor}` : 'none',
+            borderRight: active ? `1rem solid ${data.backgroundColor}` : 'none',
             borderBottom: active
               ? `1rem solid ${data.backgroundColor}`
               : 'none',
