@@ -8,7 +8,7 @@ const NavigationBar = () => {
     <React.Fragment>
       <p>
         Je suis designer pluridisciplinaire, axée sur la conception graphique,
-        l'illustration et le set design. Freelance, 'joeuvre entre Paris,
+        l'illustration et le set design. Freelance, j'œuvre entre Paris,
         Bordeaux et Orléans.
       </p>
       <p>
