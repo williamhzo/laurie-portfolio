@@ -85,9 +85,9 @@ const projects = {
     tags: ['direction artistique', 'graphisme', 'typographie'],
     backgroundColor: 'rgb(141, 111, 135)',
     largeMedia:
-      'https://res.cloudinary.com/flextance/video/upload/v1594111618/laurie-bonneau-folio/HOME_APANA_1_uuyyzi.mp4',
+      'https://res.cloudinary.com/flextance/image/upload/v1594111617/laurie-bonneau-folio/galette_home_mln7ii.png',
     smallMedia:
-      'https://res.cloudinary.com/flextance/image/upload/v1594111649/laurie-bonneau-folio/HOME_APANA_2_bssxxm.png',
+      'https://res.cloudinary.com/flextance/image/upload/v1594111670/laurie-bonneau-folio/HOME_THIENOT_2_qux9u1.png',
   },
   louboutin: {
     title: 'louboutin',
