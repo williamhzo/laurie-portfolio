@@ -89,9 +89,12 @@ const ChineseNewYear = () => {
         <div
           className="border-project"
           style={{
-            borderTop: active ? `1rem solid rgb(88, 88, 86)` : 'none',
-            borderRight: active ? `1rem solid rgb(88, 88, 86)` : 'none',
-            borderBottom: active ? `1rem solid rgb(88, 88, 86)` : 'none',
+            borderTop: active ? `1rem solid` : 'none',
+            borderRight: active ? `1rem solid` : 'none',
+            borderBottom: active ? `1rem solid` : 'none',
+            borderImageSource:
+              'linear-gradient(104deg, rgb(88, 88, 86) 0%,rgb(156, 154, 154) 25%, rgb(217, 216, 216) 50%, rgb(156, 154, 154) 75%, rgb(88, 88, 86) 100%)',
+            borderImageSlice: '1',
           }}
         ></div>
       </div>
