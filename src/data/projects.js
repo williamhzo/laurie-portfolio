@@ -109,7 +109,7 @@ const projects = {
     description: '',
     emojiTags: ['🧃', '💡', '🖍'],
     tags: ['packaging', 'direction artistique', 'illustration'],
-    backgroundColor: 'rgb(17, 85, 156)',
+    backgroundColor: 'rgb(232, 188, 182)',
     largeMedia:
       'https://res.cloudinary.com/flextance/image/upload/v1594111619/laurie-bonneau-folio/HOME_BIO_1_wuqupp.png',
     smallMedia:
@@ -122,7 +122,7 @@ const projects = {
     description: '',
     emojiTags: ['🔨', '🖥'],
     tags: ['set design', 'post-production'],
-    backgroundColor: 'rgb(233, 67, 67)',
+    backgroundColor: 'rgb(93, 93, 95)',
     largeMedia:
       'https://res.cloudinary.com/flextance/video/upload/v1594111614/laurie-bonneau-folio/AURIELLE_JEANLOUIS_huxlyw.mp4',
     smallMedia:
@@ -140,7 +140,7 @@ const projects = {
     smallMedia:
       'https://res.cloudinary.com/flextance/image/upload/v1594111669/laurie-bonneau-folio/HOME_MADE_2_wbyfpj.png',
     backgroundColor:
-      'linear-gradient(90deg,rgb(252, 192, 13) 0%,rgb(227, 6, 19) 100%)',
+      'linear-gradient(90deg, rgba(252,192,13,1) 25%, rgba(227,6,19,1) 100%)',
   },
   canalPlus: {
     title: 'canal +',
