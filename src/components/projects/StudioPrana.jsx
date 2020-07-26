@@ -47,14 +47,16 @@ const StudioPrana = () => {
         backgroundColor: active ? data.backgroundColor : 'inherit',
       }}
     >
-      <div className="project-box relative flex">
+      <div
+        className="project-box relative flex"
+        onMouseEnter={() => setActive(true)}
+        onMouseLeave={() => setActive(false)}
+      >
         <img
           alt={`${data.title} illustration`}
           src={data.smallMedia}
           css={hoverImageStyle}
           className="hoverable"
-          onMouseEnter={() => setActive(true)}
-          onMouseLeave={() => setActive(false)}
         />
         {active && (
           <React.Fragment>

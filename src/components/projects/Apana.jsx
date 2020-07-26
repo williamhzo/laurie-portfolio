@@ -53,13 +53,15 @@ const Apana = () => {
         backgroundColor: active ? data.backgroundColor : 'inherit',
       }}
     >
-      <div className="project-box relative flex centered">
+      <div
+        className="project-box relative flex centered"
+        onMouseEnter={() => setActive(true)}
+        onMouseLeave={() => setActive(false)}
+      >
         <img
           className="hoverable "
           alt={`${data.title} illustration`}
           src={data.smallMedia}
-          onMouseEnter={() => setActive(true)}
-          onMouseLeave={() => setActive(false)}
           css={hoverImageStyle}
         />
         {active && (

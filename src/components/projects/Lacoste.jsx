@@ -50,12 +50,14 @@ const Lacoste = () => {
       }}
     >
       <LargeMediaLeft data={data} active={active} />
-      <div className="project-box relative flex centered">
+      <div
+        className="project-box relative flex centered"
+        onMouseEnter={() => setActive(true)}
+        onMouseLeave={() => setActive(false)}
+      >
         <video
           id="lacoste-video"
           className="hoverable "
-          onMouseEnter={() => setActive(true)}
-          onMouseLeave={() => setActive(false)}
           loop
           autoPlay
           css={hoverImageStyle}

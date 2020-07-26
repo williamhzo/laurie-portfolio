@@ -54,14 +54,14 @@ const JeanLouis = () => {
         style={{
           background: active ? data.backgroundColor : 'inherit',
         }}
+        onMouseEnter={() => setActive(true)}
+        onMouseLeave={() => setActive(false)}
       >
         <img
           alt={`${data.title} illustration`}
           src={data.smallMedia}
           css={hoverImageStyle}
           className="hoverable"
-          onMouseEnter={() => setActive(true)}
-          onMouseLeave={() => setActive(false)}
         />
         {active && (
           <React.Fragment>
