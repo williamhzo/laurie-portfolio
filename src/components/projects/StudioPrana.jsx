@@ -7,11 +7,11 @@ import LargeMediaRight from '../LargeMediaRight'
 
 const emojiListStyle = css({
   top: 'calc(25% - 1.5rem - 1rem)',
-  marginLeft: 'var(--global-spacing)',
+  marginLeft: '1rem',
 })
 
 const emojiStyle = css({
-  marginRight: 'var(--global-spacing)',
+  marginRight: '1rem',
 })
 
 const titleStyle = css({
@@ -33,7 +33,7 @@ const tagListStyle = css({
 
 const dateStyle = css({
   bottom: 'calc(25% - 1rem - 1rem)',
-  marginLeft: 'var(--global-spacing)',
+  marginLeft: '1rem',
 })
 
 const StudioPrana = () => {

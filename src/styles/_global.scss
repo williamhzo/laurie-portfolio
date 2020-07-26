@@ -68,6 +68,14 @@ img {
   justify-content: center;
 }
 
+.start {
+  justify-content: flex-start;
+}
+
+.end {
+  justify-content: flex-end;
+}
+
 .emoji {
   height: 1.5rem;
 }
@@ -111,7 +119,7 @@ h2 {
 
 h3 {
   font-family: 'Tofino-light-italic';
-  font-size: 0.75rem;
+  font-size: 1rem;
 }
 
 p {
