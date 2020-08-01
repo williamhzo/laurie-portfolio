@@ -1,17 +1,20 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import projects from '../data/projects'
 import styled from '@emotion/styled'
+
+import ArrowLeft from '../assets/arrowLeft'
 
 const Section = styled.section`
   display: grid;
   grid-template-columns: 0.3fr 0.7fr;
+  height: 200vh;
 `
 
 const StripContainer = styled.section`
   padding: 2rem 2rem 2rem 0;
-  height: 100%;
-  ${(props) => ({
-    backgroundColor: props.backgroundColor,
+  ${({ backgroundColor }) => ({
+    backgroundColor: backgroundColor,
   })};
 `
 
@@ -47,29 +50,39 @@ const PaddingWrapper = styled.div`
   padding: 0 3rem;
 `
 
+const IconWrapper = styled.div`
+  height: 32px;
+  width: 32px;
+`
+
 function StudioPrana() {
   const data = JSON.parse(JSON.stringify(projects.studioPrana))
 
   return (
     <Section>
       <StripContainer backgroundColor={data.stripColor}>
+        <IconWrapper>
+          <Link exact to="/" className="cursor-cursor">
+            <ArrowLeft />
+          </Link>
+        </IconWrapper>
         <PaddingWrapper>
           <ProjectTitle>
             studio<br></br>prana
           </ProjectTitle>
           <ProjectDate className="light">{data.date}</ProjectDate>
         </PaddingWrapper>
-        <Separator></Separator>
+        <Separator />
         <PaddingWrapper>
           <LightText className="light">{data.lightDescription}</LightText>
           <Text>{data.regularDescription}</Text>
         </PaddingWrapper>
-        <Separator></Separator>
+        <Separator />
         <PaddingWrapper>
           <EmojiList className="tags flex">
-            {data.emojiTags.map((el, index) => (
-              <Emojis className="emoji" key={index}>
-                {el}
+            {data.emojiTags.map((emoji, index) => (
+              <Emojis className="emoji" key={`${index}${emoji}`}>
+                {emoji}
               </Emojis>
             ))}
           </EmojiList>

@@ -44,10 +44,6 @@ img {
   height: auto;
 }
 
-.link {
-  cursor: url(../assets/cursor/cursor-bold.png) 15 15, auto;
-}
-
 // atoms & layout
 
 .tags {
@@ -108,6 +104,13 @@ img {
   .mobile-only {
     display: none;
   }
+}
+
+.cursor-cursor {
+  cursor: url(../assets/cursor/cursor_hover-bold.png) 15 15, pointer;
+}
+.cursor-cursor:active {
+  cursor: url(../assets/cursor/cursor_click-bold.png) 15 15, pointer;
 }
 
 // headings and text

@@ -65,7 +65,7 @@ const StudioPrana = () => {
         onMouseEnter={() => setActive(true)}
         onMouseLeave={() => setActive(false)}
       >
-        <Link className="link" exact to={'/studio-prana'}>
+        <Link className="cursor-cursor" exact to={'/studio-prana'}>
           {active && (
             <h1 className="float project-title" css={titleStyle}>
               studio<br></br>prana
