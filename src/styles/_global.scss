@@ -127,16 +127,14 @@ h2 {
 
 h3 {
   font-family: 'Tofino-light-italic';
-  font-size: 1rem;
+  font-size: 0.75rem;
 }
 
 p {
   font-family: 'Tofino-book';
-  font-size: 1rem;
+  font-size: 0.75rem;
   line-height: 1.2;
-  &:not(:last-child) {
-    margin-bottom: 0.75rem;
-  }
+  margin-bottom: 1rem;
 }
 
 .light {
@@ -173,7 +171,7 @@ p {
 
 hr {
   width: 75%;
-  margin: $app-margin $app-margin $app-margin 0;
+  margin: 1rem 1rem 1rem 0;
   background-color: var(--dark);
   height: 1px;
   border: none;
@@ -181,18 +179,6 @@ hr {
 
 .strip {
   width: 30%;
-}
-
-.strip.studio-prana {
-  background-color: var(--strip-studio-prana);
-}
-
-.project-detail.studio-prana {
-  background-color: var(--bg-studio-prana);
-}
-
-.project-detail {
-  width: 100%;
 }
 
 .project-box {

@@ -12,7 +12,12 @@ const projects = {
       'illustration',
       'typographie',
     ],
+    lightDescription:
+      'De l’énergie à la sérénité ! Tout nouveau studio de coaching sur Orléans, le Studio Prana désire mettre en avant ses multiples domaines d’activités, opposés mais surtout complémentaires. Le tout, à l’image de ses deux protagonistes : jeunes, féminines, douces mais dynamiques.',
+    regularDescription:
+      'Conception, réalisation de l’identité visuelle, des supports print et d’une série de visuels. Création d’une police personnalisée et d’illustrations.',
     backgroundColor: 'rgb(53, 75, 62)',
+    stripColor: 'rgb(248, 216, 150)',
     largeMedia:
       'https://res.cloudinary.com/flextance/image/upload/v1594111633/laurie-bonneau-folio/HOME_PRANA_1_ss4qr0.png',
     smallMedia:
@@ -96,7 +101,7 @@ const projects = {
     description: '',
     emojiTags: ['🖥'],
     tags: ['post-production'],
-    backgroundColor: 'rgb(233, 67, 67)',
+    backgroundColor: 'rgb(255, 209, 25)',
     largeMedia:
       'https://res.cloudinary.com/flextance/image/upload/v1594112226/laurie-bonneau-folio/HOME_LOUBOUTIN_1-min_iqzx45.png',
     smallMedia:

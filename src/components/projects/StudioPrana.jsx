@@ -1,44 +1,57 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 import projects from '../../data/projects'
 import LargeMediaRight from '../LargeMediaRight'
 
-const emojiListStyle = css({
-  top: 'calc(25% - 1.5rem - 1rem)',
-  marginLeft: '1rem',
-})
+const relativeWrapper = css`
+  width: 50%;
+`
 
-const emojiStyle = css({
-  marginRight: '1rem',
-})
+const emojiWrapper = css`
+  top: calc(-1.5rem - 1rem);
+  width: 100%;
+  padding-left: 1rem;
+`
 
-const titleStyle = css({
-  textAlign: 'right',
-  top: '1rem',
-  right: '1rem',
-})
+const emojiStyle = css`
+  margin-right: 1rem;
+`
 
-const hoverImageStyle = css({
-  width: '50%',
-})
+const titleStyle = css`
+  text-align: right;
+  top: 1rem;
+  right: 1rem;
+`
 
-const tagListStyle = css({
-  margin: '0',
-  bottom: '25%',
-  maxWidth: '7rem',
-  left: 'calc(50% + 1rem)',
-})
+const hoverImageStyle = css`
+  width: 100%;
+`
 
-const dateStyle = css({
-  bottom: 'calc(25% - 1rem - 1rem)',
-  marginLeft: '1rem',
-})
+const tagsWrapper = css`
+  height: 100%;
+  right: calc(-7rem - 1rem);
+`
+
+const tagListStyle = css`
+  margin: 0;
+  width: 7rem;
+`
+
+const dateWrapper = css`
+  width: 100%;
+  bottom: calc(-1rem - 1.5rem);
+`
+
+const dateStyle = css`
+  margin-left: 1rem;
+`
 
 const StudioPrana = () => {
   const [active, setActive] = useState(false)
-  const data = JSON.parse(JSON.stringify(projects.studioPrana)) // deep copy of data
+  const data = JSON.parse(JSON.stringify(projects.studioPrana))
 
   return (
     <div
@@ -52,36 +65,48 @@ const StudioPrana = () => {
         onMouseEnter={() => setActive(true)}
         onMouseLeave={() => setActive(false)}
       >
-        <img
-          alt={`${data.title} illustration`}
-          src={data.smallMedia}
-          css={hoverImageStyle}
-          className="hoverable"
-        />
-        {active && (
-          <React.Fragment>
-            <ul className="tags flex float" css={emojiListStyle}>
-              {data.emojiTags.map((el, index) => (
-                <li className="emoji" css={emojiStyle} key={index}>
-                  {el}
-                </li>
-              ))}
-            </ul>
-            <ul className="tags float" css={tagListStyle}>
-              {data.tags.map((el, index) => (
-                <li className="project-tag" key={index}>
-                  {el}
-                </li>
-              ))}
-            </ul>
-            <h3 className="project-date float" css={dateStyle}>
-              {data.date}
-            </h3>
+        <Link className="link" exact to={'/studio-prana'}>
+          {active && (
             <h1 className="float project-title" css={titleStyle}>
               studio<br></br>prana
             </h1>
-          </React.Fragment>
-        )}
+          )}
+          <div css={relativeWrapper} className="relative flex centered">
+            <img
+              alt={`${data.title} illustration`}
+              src={data.smallMedia}
+              css={hoverImageStyle}
+              className="hoverable"
+            />
+            {active && (
+              <React.Fragment>
+                <div className="flex start float" css={emojiWrapper}>
+                  <ul className="tags flex">
+                    {data.emojiTags.map((el, index) => (
+                      <li className="emoji" css={emojiStyle} key={index}>
+                        {el}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div css={tagsWrapper} className="flex column end float">
+                  <ul className="tags" css={tagListStyle}>
+                    {data.tags.map((el, index) => (
+                      <li className="project-tag" key={index}>
+                        {el}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="flex end float" css={dateWrapper}>
+                  <h3 className="project-date" css={dateStyle}>
+                    {data.date}
+                  </h3>
+                </div>
+              </React.Fragment>
+            )}
+          </div>
+        </Link>
       </div>
       <LargeMediaRight data={data} active={active} />
     </div>

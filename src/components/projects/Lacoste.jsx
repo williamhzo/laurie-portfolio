@@ -49,7 +49,7 @@ const dateStyle = css`
 `
 
 const Lacoste = () => {
-  const [active, setActive] = useState(true)
+  const [active, setActive] = useState(false)
   const data = JSON.parse(JSON.stringify(projects.lacoste)) // deep copy of data
 
   return (
