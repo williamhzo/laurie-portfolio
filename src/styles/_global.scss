@@ -27,7 +27,7 @@ body {
     'Noto Color Emoji';
   margin: 0;
   padding: 0;
-  cursor: url(../assets/cursor/cursor.png) 15 15, auto;
+  cursor: url(../assets/cursor/cursor-bold.png) 15 15, auto;
   background-color: var(--light);
 }
 
@@ -42,6 +42,10 @@ img {
   display: inline-block;
   max-width: 100%;
   height: auto;
+}
+
+.link {
+  cursor: url(../assets/cursor/cursor-bold.png) 15 15, auto;
 }
 
 // atoms & layout
@@ -89,7 +93,11 @@ img {
 }
 
 .hoverable {
-  cursor: url(../assets/cursor/cursor-hover.png) 15 15, pointer;
+  cursor: url(../assets/cursor/cursor_hover-bold.png) 15 15, pointer;
+}
+
+.hoverable:active {
+  cursor: url(../assets/cursor/cursor_click-bold.png) 15 15, pointer;
 }
 
 .mobile-only {
