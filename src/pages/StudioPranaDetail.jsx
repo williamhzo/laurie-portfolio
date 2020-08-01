@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx, css } from '@emotion/core'
 import React from 'react'
 import projects from '../data/projects'
 import styled from '@emotion/styled'
