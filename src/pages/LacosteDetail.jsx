@@ -4,6 +4,7 @@ import projects from '../data/projects'
 import styled from '@emotion/styled'
 
 const Section = styled.section`
+  color: white;
   display: grid;
   grid-template-columns: 0.3fr 0.7fr;
   height: 200vh;
@@ -34,6 +35,7 @@ const Text = styled.p`
 
 const Separator = styled.hr`
   width: 60%;
+  background-color: white;
 `
 
 const EmojiList = styled.ul`
@@ -54,8 +56,8 @@ const IconWrapper = styled.div`
   margin-bottom: 1.5rem;
 `
 
-function StudioPranaDetail() {
-  const data = JSON.parse(JSON.stringify(projects.studioPrana))
+function LacosteDetail() {
+  const data = JSON.parse(JSON.stringify(projects.lacoste))
 
   return (
     <Section>
@@ -99,4 +101,4 @@ function StudioPranaDetail() {
   )
 }
 
-export default StudioPranaDetail
+export default LacosteDetail

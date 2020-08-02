@@ -1,115 +1,125 @@
-/** @jsx jsx */
-import { jsx, css } from '@emotion/core'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import styled from '@emotion/styled'
 
 import projects from '../../data/projects'
-import LargeMediaRight from '../LargeMediaRight'
+import LargeMedia from '../LargeMedia'
 
-const relativeWrapper = css`
+const MainSection = styled.section``
+
+const HoverableSection = styled.div``
+
+const RelativeWrapper = styled.div`
   width: 50%;
 `
 
-const emojiWrapper = css`
+const EmojiWrapper = styled.div`
   top: calc(-1.5rem - 1rem);
   width: 100%;
   padding-left: 1rem;
 `
 
-const emojiStyle = css`
+const EmojisList = styled.ul``
+
+const Emoji = styled.li`
   margin-right: 1rem;
 `
 
-const titleStyle = css`
+const Title = styled.h1`
   text-align: right;
   top: 1rem;
   right: 1rem;
 `
 
-const hoverImageStyle = css`
+const HoverImage = styled.img`
   width: 100%;
 `
 
-const tagsWrapper = css`
+const TagsWrapper = styled.div`
   height: 100%;
   right: calc(-7rem - 1rem);
 `
 
-const tagListStyle = css`
+const TagsList = styled.ul`
   margin: 0;
   width: 7rem;
 `
 
-const dateWrapper = css`
+const Tag = styled.li``
+
+const DateWrapper = styled.div`
   width: 100%;
   bottom: calc(-1rem - 1.5rem);
 `
 
-const dateStyle = css`
+const Date = styled.h3`
   margin-left: 1rem;
 `
 
-const StudioPrana = () => {
+function StudioPrana() {
   const [active, setActive] = useState(false)
   const data = JSON.parse(JSON.stringify(projects.studioPrana))
 
   return (
-    <div
+    <MainSection
       className="flex"
       style={{
         backgroundColor: active ? data.backgroundColor : 'inherit',
       }}
     >
-      <div
+      <HoverableSection
         className="project-box relative flex"
         onMouseEnter={() => setActive(true)}
         onMouseLeave={() => setActive(false)}
       >
-        <Link className="cursor-cursor" exact to={'/studio-prana'}>
-          {active && (
-            <h1 className="float project-title" css={titleStyle}>
-              studio<br></br>prana
-            </h1>
-          )}
-          <div css={relativeWrapper} className="relative flex centered">
-            <img
+        {active && (
+          <Title className="float project-title">
+            {data.title[0]}
+            <br></br>
+            {data.title.length > 1 && data.title[1]}
+          </Title>
+        )}
+
+        <RelativeWrapper className="relative flex centered">
+          <Link className="custom-cursor" exact to={'/studio-prana'}>
+            <HoverImage
               alt={`${data.title} illustration`}
               src={data.smallMedia}
-              css={hoverImageStyle}
               className="hoverable"
-            />
-            {active && (
-              <React.Fragment>
-                <div className="flex start float" css={emojiWrapper}>
-                  <ul className="tags flex">
-                    {data.emojiTags.map((el, index) => (
-                      <li className="emoji" css={emojiStyle} key={index}>
-                        {el}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div css={tagsWrapper} className="flex column end float">
-                  <ul className="tags" css={tagListStyle}>
-                    {data.tags.map((el, index) => (
-                      <li className="project-tag" key={index}>
-                        {el}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="flex end float" css={dateWrapper}>
-                  <h3 className="project-date" css={dateStyle}>
-                    {data.date}
-                  </h3>
-                </div>
-              </React.Fragment>
-            )}
-          </div>
-        </Link>
-      </div>
-      <LargeMediaRight data={data} active={active} />
-    </div>
+            />{' '}
+          </Link>
+
+          {active && (
+            <React.Fragment>
+              <EmojiWrapper className="flex start float">
+                <EmojisList className="tags flex">
+                  {data.emojiTags.map((el, index) => (
+                    <Emoji className="emoji" key={index}>
+                      {el}
+                    </Emoji>
+                  ))}
+                </EmojisList>
+              </EmojiWrapper>
+
+              <TagsWrapper className="flex column end float">
+                <TagsList className="tags">
+                  {data.tags.map((el, index) => (
+                    <Tag className="project-tag" key={index}>
+                      {el}
+                    </Tag>
+                  ))}
+                </TagsList>
+              </TagsWrapper>
+
+              <DateWrapper className="flex end float">
+                <Date className="project-date">{data.date}</Date>
+              </DateWrapper>
+            </React.Fragment>
+          )}
+        </RelativeWrapper>
+      </HoverableSection>
+      <LargeMedia data={data} active={active} side="right" />
+    </MainSection>
   )
 }
 

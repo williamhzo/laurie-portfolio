@@ -3,11 +3,7 @@ import { jsx, css } from '@emotion/core'
 import React, { useState } from 'react'
 
 import projects from '../../data/projects'
-
-const videoStyle = css({
-  width: '100%',
-  height: '100%',
-})
+import LargeMedia from '../LargeMedia'
 
 const emojiListStyle = css({
   bottom: '21%',
@@ -53,29 +49,7 @@ const ElsachaTV = () => {
         backgroundColor: active ? data.backgroundColor : 'inherit',
       }}
     >
-      <div className="project-box relative flex">
-        <div
-          className="border-project"
-          style={{
-            borderTop: active ? `1rem solid ${data.backgroundColor}` : 'none',
-            borderLeft: active ? `1rem solid ${data.backgroundColor}` : 'none',
-            borderBottom: active
-              ? `1rem solid ${data.backgroundColor}`
-              : 'none',
-          }}
-        ></div>
-        <video
-          id={`${data.title}-video`}
-          loop
-          autoPlay
-          alt={`${data.title} video`}
-          css={videoStyle}
-        >
-          <source src={data.largeMedia} type="video/mp4" />
-          <source src={data.largeMedia} type="video/ogg" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
+      <LargeMedia data={data} active={active} video />
       <div
         className="project-box relative flex centered"
         onMouseEnter={() => setActive(true)}

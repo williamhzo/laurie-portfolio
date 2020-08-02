@@ -1,6 +1,6 @@
 const projects = {
   studioPrana: {
-    title: 'studio prana',
+    title: ['studio', 'prana'],
     subtitle: '',
     date: '2020',
     description: '',
@@ -24,7 +24,7 @@ const projects = {
       'https://res.cloudinary.com/flextance/image/upload/v1594111667/laurie-bonneau-folio/HOME_PRANA_2_nlhxvm.jpg',
   },
   lacoste: {
-    title: 'lacoste',
+    title: ['lacoste'],
     subtitle: 'Rolland Garros',
     date: '2019',
     description: '',
@@ -45,7 +45,7 @@ const projects = {
       'https://res.cloudinary.com/flextance/video/upload/v1594111662/laurie-bonneau-folio/HOME_LACOSTE_2_ogqtub.mp4',
   },
   chineseNewYear: {
-    title: 'chinese new year',
+    title: ['chinese', 'new year'],
     subtitle: 'happy',
     date: '2019-2020',
     description: '',
@@ -62,7 +62,7 @@ const projects = {
     'https://res.cloudinary.com/flextance/image/upload/v1594111655/laurie-bonneau-folio/HOME_CHINESE_2_npxg1p.png',
   },
   elsachatTv: {
-    title: 'elsachat',
+    title: ['elsachat'],
     subtitle: 'tv',
     date: 'Decembre 2018',
     description: '',
@@ -78,7 +78,7 @@ const projects = {
       'https://res.cloudinary.com/flextance/image/upload/v1594111658/laurie-bonneau-folio/HOME_ELSACHAT_2_mc7qy9.png',
   },
   apana: {
-    title: 'apana',
+    title: ['apana'],
     subtitle: '',
     date: '2020',
     description: '',
@@ -94,7 +94,7 @@ const projects = {
       'https://res.cloudinary.com/flextance/image/upload/v1594111649/laurie-bonneau-folio/HOME_APANA_2_bssxxm.png',
   },
   thienot: {
-    title: 'champagne thiénot',
+    title: ['champagne', 'thiénot'],
     subtitle: 'la maison',
     date: 'Année 2018',
     description: '',
@@ -110,7 +110,7 @@ const projects = {
       'https://res.cloudinary.com/flextance/image/upload/v1594111670/laurie-bonneau-folio/HOME_THIENOT_2_qux9u1.png',
   },
   louboutin: {
-    title: 'louboutin',
+    title: ['louboutin'],
     subtitle: 'christian',
     date: '2019',
     description: '',
@@ -126,7 +126,7 @@ const projects = {
       'https://res.cloudinary.com/flextance/image/upload/v1594111664/laurie-bonneau-folio/HOME_LOUBOUTIN_2_npyetr.png',
   },
   biotherm: {
-    title: 'biotherm',
+    title: ['biotherm'],
     subtitle: 'x elsa muse',
     date: '2018',
     description: '',
@@ -142,7 +142,7 @@ const projects = {
       'https://res.cloudinary.com/flextance/image/upload/v1594111651/laurie-bonneau-folio/HOME_BIO_2_sjywct.png',
   },
   jeanLouis: {
-    title: 'jean-louis',
+    title: ['jean-louis'],
     subtitle: 'première classe',
     date: "Who's Next 2018",
     description: '',
@@ -158,7 +158,7 @@ const projects = {
       'https://res.cloudinary.com/flextance/image/upload/v1594111660/laurie-bonneau-folio/HOME_JEANLOUIS_2_umon0d.png',
   },
   madeCom: {
-    title: 'made.com',
+    title: ['made.com'],
     subtitle: 'x elsa muse',
     date: '2018',
     description: '',
@@ -175,7 +175,7 @@ const projects = {
       'https://res.cloudinary.com/flextance/image/upload/v1594111669/laurie-bonneau-folio/HOME_MADE_2_wbyfpj.png',
   },
   canalPlus: {
-    title: 'canal +',
+    title: ['canal +'],
     subtitle: 'family',
     date: '2018-2019',
     description: '',
