@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom'
 import projects from '../data/projects'
 import styled from '@emotion/styled'
 
-import ArrowLeft from '../assets/arrowLeft'
-
 const Section = styled.section`
   display: grid;
   grid-template-columns: 0.3fr 0.7fr;
@@ -51,8 +49,9 @@ const PaddingWrapper = styled.div`
 `
 
 const IconWrapper = styled.div`
-  height: 32px;
-  width: 32px;
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
 `
 
 function StudioPrana() {
@@ -61,12 +60,12 @@ function StudioPrana() {
   return (
     <Section>
       <StripContainer backgroundColor={data.stripColor}>
-        <IconWrapper>
-          <Link exact to="/" className="cursor-cursor">
-            <ArrowLeft />
-          </Link>
-        </IconWrapper>
         <PaddingWrapper>
+          <IconWrapper className="hoverable">
+            <Link exact to="/" className="custom-cursor">
+              🏠
+            </Link>
+          </IconWrapper>
           <ProjectTitle>
             studio<br></br>prana
           </ProjectTitle>
